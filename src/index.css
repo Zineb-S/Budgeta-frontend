@@ -1,0 +1,137 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 248 58% 62%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 187 71% 44%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 248 58% 62%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 13% 18%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 248 58% 62%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 215 28% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 28% 17%;
+    --sidebar-ring: 248 58% 62%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 248 58% 62%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 187 71% 44%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 248 58% 62%;
+    
+    --sidebar-background: 222.2 84% 4.9%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 248 58% 62%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217.2 32.6% 17.5%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-ring: 248 58% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Budgeta styles with new beautiful palette */
+.budget-card {
+  @apply rounded-xl border bg-card text-card-foreground shadow-sm transition-all hover:shadow-lg hover:shadow-budget-blue/5;
+}
+
+.budget-section-title {
+  @apply text-xl font-semibold leading-none tracking-tight;
+}
+
+.budget-gradient-bg {
+  @apply bg-gradient-to-br from-budget-gradient-from to-budget-gradient-to;
+}
+
+.expense-category {
+  @apply inline-flex items-center justify-center rounded-full px-3 py-1 text-xs font-medium;
+}
+
+.category-food {
+  @apply bg-budget-food/10 text-budget-food border border-budget-food/20;
+}
+
+.category-transport {
+  @apply bg-budget-transport/10 text-budget-transport border border-budget-transport/20;
+}
+
+.category-housing {
+  @apply bg-budget-housing/10 text-budget-housing border border-budget-housing/20;
+}
+
+.category-entertainment {
+  @apply bg-budget-entertainment/10 text-budget-entertainment border border-budget-entertainment/20;
+}
+
+.category-utilities {
+  @apply bg-budget-utilities/10 text-budget-utilities border border-budget-utilities/20;
+}
+
+.category-other {
+  @apply bg-budget-other/10 text-budget-other border border-budget-other/20;
+}
